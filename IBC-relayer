@@ -1,0 +1,98 @@
+**`IBC Namada <> Osmosis`**
+
+**Hermes memo_prefix:** **`AndyBlack`**
+```
+# Chain: shielded-expedition.88f17d1d14
+  - Client: 07-tendermint-3960
+    * Connection: connection-1986
+      | State: OPEN
+      | Counterparty state: OPEN
+      + Channel: channel-1325
+        | Port: transfer
+        | State: OPEN
+        | Counterparty: channel-6922
+Creation address: tnam1qr530g8phxndk425pu2kkmw2rmuu638jrgf2q055
+```
+```
+# Chain: osmo-test-5
+  - Client: 07-tendermint-3378
+    * Connection: connection-2979
+      | State: OPEN
+      | Counterparty state: OPEN
+      + Channel: channel-6922
+        | Port: transfer
+        | State: OPEN
+        | Counterparty: channel-1325
+Creation address: osmo1yqy2thntlmr8tsk32fy4kynjjkq69ssdem8wqn
+```
+
+**`Test transactions:`**
+
+**from shielded-expedition.88f17d1d14 to osmo-test-5**   
+https://www.mintscan.io/osmosis-testnet/tx/4AE7A9D4FC8C614DC1294D170D42FAF1421722AB6D56288D916B462A70E2321A?height=6692550
+
+**from osmo-test-5 to shielded-expedition.88f17d1d14**  
+https://www.mintscan.io/osmosis-testnet/tx/17143E797540CF7C80044B03EAF43D1F51110BB2DF5782076F7095FE6EF907BB?height=6692484
+
+**`Public RPC:`**
+
+**shielded-expedition.88f17d1d14:** https://namrpc.b1f1.xyz
+
+**osmo-test-5:** https://namrpc.b1f1.xyz:27657/
+
+
+**`create connection, channels output`**
+```
+SUCCESS Channel {
+    ordering: Unordered,
+    a_side: ChannelSide {
+        chain: BaseChainHandle {
+            chain_id: ChainId {
+                id: "shielded-expedition.88f17d1d14",
+                version: 0,
+            },
+            runtime_sender: Sender { .. },
+        },
+        client_id: ClientId(
+            "07-tendermint-3960",
+        ),
+        connection_id: ConnectionId(
+            "connection-1986",
+        ),
+        port_id: PortId(
+            "transfer",
+        ),
+        channel_id: Some(
+            ChannelId(
+                "channel-1325",
+            ),
+        ),
+        version: None,
+    },
+    b_side: ChannelSide {
+        chain: BaseChainHandle {
+            chain_id: ChainId {
+                id: "osmo-test-5",
+                version: 5,
+            },
+            runtime_sender: Sender { .. },
+        },
+        client_id: ClientId(
+            "07-tendermint-3378",
+        ),
+        connection_id: ConnectionId(
+            "connection-2979",
+        ),
+        port_id: PortId(
+            "transfer",
+        ),
+        channel_id: Some(
+            ChannelId(
+                "channel-6922",
+            ),
+        ),
+        version: None,
+    },
+    connection_delay: 0ns,
+}
+```
